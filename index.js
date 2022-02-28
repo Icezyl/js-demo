@@ -92,11 +92,24 @@
 
 // console.log(Object.getOwnPropertyNames(obj));
 
-const obj = {};
-Object.defineProperty(obj, "a", {
-  value: 12,
-  enumerable: true
-});
+// const obj = {};
+// Object.defineProperty(obj, "a", {
+//   value: 12,
+//   enumerable: true
+// });
 
-let ls = Object.entries(obj);
-console.log("ls: ", ls);
+// let ls = Object.entries(obj);
+// console.log("ls: ", ls);
+
+let obj = {
+  a: 5,
+  b: {
+    c: 6,
+  },
+}
+
+Object.freeze(obj)
+
+obj.b.c = 8
+console.log(obj)
+// console.log('obj: ', obj);

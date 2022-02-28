@@ -17,9 +17,10 @@
 // objProxy.name = "lili"
 // console.log(objProxy.name, obj)
 
-let obj = Object.defineProperty({}, "a", {
-  value: 10,
-})
-console.log("obj: ", obj)
-console.log("obj: ", Object.assign(obj))
-console.log(JSON.stringify(obj))
+// 没有枚举无法在当前情况下使用
+// let obj = Object.defineProperty({}, "a", {
+//   value: 10,
+// })
+// console.log("obj: ", obj) // {value:10}
+// console.log("obj: ", Object.assign(obj)) // {}
+// console.log(JSON.stringify(obj)) // {}

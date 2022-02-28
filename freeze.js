@@ -17,6 +17,7 @@ let obj = {
  */
 Object.deepFreeze = function (o) {
   let _keys = Object.getOwnPropertyNames(o)
+  console.log( _keys);
   if (_keys.length > 0) {
     _keys.forEach(function (key) {
       var _value = o[key]
